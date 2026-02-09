@@ -1,217 +1,545 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html class="light" lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>売れるウェブサイト制作 | Web Designer Portfolio</title>
-    <meta name="description" content="ココナラで活動中のWebデザイナー。売れるランディングページ（LP）、WordPress構築、コーディング代行。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Executive English Coaching | Premium</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Inter:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "navy": "#001f3f",
+                        "accent-gold": "#D4AF37",
+                        "deep-navy": "#00152b",
+                        "slate-warm": "#f8f9fa",
+                    },
+                    fontFamily: {
+                        "serif": ["'Noto Serif JP'", "serif"],
+                        "sans": ["'Inter'", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "widest-plus": "0.15em",
+                        "luxury": "0.05em"
+                    },
+                    lineHeight: {
+                        "luxury": "1.8"
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans tracking-luxury leading-luxury text-navy;
+            }
+            h1, h2, h3, .font-serif-custom {
+                @apply font-serif;
+            }
+        }
+        .gold-border {
+            border-image: linear-gradient(to right, #D4AF37, #F1D592, #D4AF37) 1;
+        }
+        .step-connector::after {
+            content: '';
+            @apply absolute left-[19px] top-10 w-[1px] h-full bg-slate-200 dark:bg-navy/20;
+        }
+        .step-item:last-child .step-connector::after {
+            display: none;
+        }
+        .bg-navy-gradient {
+            background: linear-gradient(135deg, #001f3f 0%, #00152b 100%);
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="logo">Amn<span>.Design</span></a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Works</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn-nav">Contact</a></li>
-                </ul>
+
+<body class="bg-white antialiased">
+
+
+    <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-navy">
+                    <span class="material-symbols-outlined text-3xl">account_balance</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-[0.2em] text-navy uppercase leading-none">EXECUTIVE</span>
+                    <span class="text-[10px] tracking-[0.4em] text-accent-gold font-bold uppercase">English
+                        Coaching</span>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-12">
+                <a class="text-xs font-bold tracking-widest hover:text-accent-gold transition-colors uppercase"
+                    href="#problems">Challenge</a>
+                <a class="text-xs font-bold tracking-widest hover:text-accent-gold transition-colors uppercase"
+                    href="#method">Methodology</a>
+                <a class="text-xs font-bold tracking-widest hover:text-accent-gold transition-colors uppercase"
+                    href="#testimonials">Success</a>
+                <a href="#contact"
+                    class="bg-navy text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-deep-navy transition-all border border-navy">
+                    BOOK CONSULTATION
+                </a>
             </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
-
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="neon-text">売れる</span><br>ウェブサイト
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-navy">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent z-10"></div>
+                <img alt="Global Business District Night View" class="w-full h-full object-cover opacity-60"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmBQWsAy3tlJG7mtPhx8euTmIBEBFBCEQ6s4_xdVfI4Q8d71z5m-uhsFJjwRulJ84_K6OqE9Dsvm9SIwMLx7J2gTGeIDRP4yEgEYUh7m_VdE1Nx3xDakzkp2WKf8r0FeVznTruLymCwZF130sbwLbUiuqP9zuS82H73Ck8P0sLGNT6VcgEHygm-jLLuqKBmzoqhKZjg08MenwTDRrJbsooBkc7CGM260XwT1h2kdvIlSFHaDRCHM-OYjPJLCNZqX-aXnWbSxSIdYs" />
+            </div>
+            <div class="relative z-20 max-w-7xl mx-auto px-8 py-24">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-4 mb-10">
+                        <div class="h-[1px] w-12 bg-accent-gold"></div>
+                        <span
+                            class="text-xs font-bold text-accent-gold uppercase tracking-[0.5em]">外資・海外案件を任されるリーダー向け</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-10 tracking-tight">
+                        世界を舞台にするリーダーのための、<br />
+                        <span class="text-accent-gold">最短最速</span>の英語習得メソッド
                     </h1>
-                    <p class="hero-subtitle">
-                        デザインでビジネスを加速させる。<br>
-                        成果にコミットするWeb制作パートナー。
+                    <p class="text-xl md:text-2xl text-slate-200 mb-14 leading-relaxed font-light">
+                        会議・交渉・登壇。実戦の場で<br class="hidden md:block" />“言葉に詰まらない”状態をつくる。
                     </p>
-                    <div class="hero-btns">
-                        <a href="#contact" class="btn btn-primary">無料相談する</a>
-                        <a href="#portfolio" class="btn btn-secondary">制作実績を見る</a>
-                    </div>
-                </div>
-                <!-- 装飾用要素 -->
-                <div class="hero-visual">
-                    <div class="glow-circle circle-1"></div>
-                    <div class="glow-circle circle-2"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section services">
-            <div class="container">
-                <h2 class="section-title">Services <span class="jp-sub">提供サービス</span></h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <h3>カスタムLP制作</h3>
-                        <p>商品やサービスの魅力を最大限に引き出し、コンバージョン（成約）に繋がるランディングページをデザインから実装まで一貫して制作します。</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        </div>
-                        <h3>WordPress構築</h3>
-                        <p>更新しやすいCMSサイトの構築。既存テーマのカスタマイズからオリジナルテーマ作成まで対応可能です。</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        </div>
-                        <h3>コーディング代行</h3>
-                        <p>デザインデータ（Figma, Adobe XD等）からの忠実なコーディング。SEOに配慮したセマンティックなマークアップを行います。</p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#contact"
+                            class="bg-accent-gold text-navy px-10 py-6 text-sm font-bold tracking-widest hover:bg-white transition-all shadow-xl text-center">
+                            無料カウンセリングを予約する
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="section portfolio">
-            <div class="container">
-                <h2 class="section-title">Works <span class="jp-sub">制作実績</span></h2>
-                <div class="portfolio-grid">
-                    <!-- Placeholder Project 1 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <!-- TODO: Replace with actual image -->
-                            <div class="placeholder-img">Project 01</div>
-                        </div>
-                        <div class="project-info">
-                            <h3>美容サロン向けLP</h3>
-                            <p>LPデザイン / コーディング</p>
-                        </div>
-                    </article>
-                    <!-- Placeholder Project 2 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                             <!-- TODO: Replace with actual image -->
-                            <div class="placeholder-img">Project 02</div>
-                        </div>
-                        <div class="project-info">
-                            <h3>コーポレートサイト</h3>
-                            <p>WordPress構築</p>
-                        </div>
-                    </article>
-                    <!-- Placeholder Project 3 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                             <!-- TODO: Replace with actual image -->
-                            <div class="placeholder-img">Project 03</div>
-                        </div>
-                        <div class="project-info">
-                            <h3>オンラインスクールLP</h3>
-                            <p>LPデザイン / ライティング</p>
-                        </div>
-                    </article>
+        <section class="py-32 bg-slate-warm" id="problems">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="max-w-2xl mb-20">
+                    <h2 class="text-xs font-bold text-accent-gold uppercase tracking-[0.4em] mb-6">The Challenge</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-navy leading-snug">エグゼクティブが直面する、<br />妥協なき英語の壁</h3>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section about">
-            <div class="container about-container">
-                <div class="about-image">
-                     <!-- TODO: Replace with actual image -->
-                    <div class="placeholder-profile">Profile</div>
-                </div>
-                <div class="about-content">
-                    <h2 class="section-title left-align">About <span class="jp-sub">私について</span></h2>
-                    <h3>Aman Tomomi</h3>
-                    <p class="role">Web Designer / Front-end Developer</p>
-                    <p class="description">
-                        「想いを形にし、結果を出す」をモットーに活動しています。<br>
-                        ただ綺麗なだけでなく、クライアント様のビジネスゴール（売上アップ、認知拡大）に貢献するためのWebサイト制作を心がけています。<br>
-                        丁寧なヒアリングと迅速なコミュニケーションで、安心してお任せいただけるよう努めています。
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="section testimonials">
-            <div class="container">
-                <h2 class="section-title">Voice <span class="jp-sub">お客様の声</span></h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="comment">「初めてのLP制作でしたが、親身になって相談に乗っていただき、予想以上の仕上がりになりました。公開後すぐに問い合わせがあり驚いています！」</p>
-                        <p class="client">美容サロン経営者 様</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="group">
+                        <div class="text-accent-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl font-light">hourglass_empty</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-6 text-navy">圧倒的な時間不足</h4>
+                        <p class="text-slate-600 leading-luxury font-light">
+                            週80時間を超える重責の中で、非効率な学習は許されません。最短距離で最高の結果を出す「戦略的アプローチ」を提供します。
+                        </p>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="comment">「迅速な対応と高いデザインセンスに感動しました。こちらの意図を汲み取ってくれるので、ストレスなく進められました。」</p>
-                        <p class="client">IT企業 マーケティング担当 様</p>
+                    <div class="group">
+                        <div class="text-accent-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl font-light">handshake</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-6 text-navy">ハイレベルな交渉力</h4>
+                        <p class="text-slate-600 leading-luxury font-light">
+                            日常会話レベルではなく、M&amp;Aや資金調達、国際カンファレンスで相手を動かす「説得力のある英語」が必要です。
+                        </p>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="comment">「コーディングの品質が高く、スマホでの表示も完璧でした。またお願いしたいです。」</p>
-                        <p class="client">Web制作会社 ディレクター 様</p>
+                    <div class="group">
+                        <div class="text-accent-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl font-light">insights</span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-6 text-navy">自己学習の限界</h4>
+                        <p class="text-slate-600 leading-luxury font-light">
+                            独学では気づけない「会議・交渉で詰まるポイント」を特定し、ビジネスへの実益に直結する改善策のみを提示します。
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="py-32 bg-white" id="method">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col lg:flex-row gap-24 items-center">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-xs font-bold text-accent-gold uppercase tracking-[0.4em] mb-6">Methodology</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold mb-10 text-navy leading-tight">
+                            実戦の場を想定した、<br />エグゼクティブ専用メソッド</h3>
+                        <p class="text-slate-600 text-lg mb-12 leading-luxury font-light">
+                            私たちのコーチングは、単なる英会話の訓練ではありません。経営者の多忙なスケジュールを前提とし、実戦でのパフォーマンスを最大化させるための「知的トレーニング」です。
+                        </p>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">verified</span>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">パーソナライズ・カリキュラム</h5>
+                                    <p class="text-slate-500 font-light">業界特有の用語、商習慣、そして個人の課題に最適化された専用プログラム。</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">verified</span>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">選りすぐりのプロフェッショナル陣</h5>
+                                    <p class="text-slate-500 font-light">グローバルビジネスの最前線を経験したコーチが、言語以上の「教養」と共に指導。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="aspect-[4/5] bg-navy overflow-hidden">
+                            <img alt="Professional Meeting Room"
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMGw5No5M0z4jzJPorLYvkASPy95MNwHdfuDPEIthwqwXw9nx-FBqNwzQcZX2OaUbF976uzXzHoSQ4czdAwUumDqRHIfEP-zbd9feLMdFAZ4Iuy0pILOQcPqA4lrUSBaHgLHjPi1KJE2TipLV8hEhLwcZ9dOW_Z-B4McjNCUR7gcE5MzH9XGXDTep_xivOZa-XTEnZdaHTztiumgGaKjWztZricUiA_Dcb-86AiZO7ivDA8DJReV9siqr_Mr_TNSgs1x0rzrshUhY" />
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -left-10 bg-navy text-white p-12 shadow-2xl border-l-4 border-accent-gold">
+                            <div class="text-3xl font-black mb-2 font-serif text-accent-gold">EXECUTIVE</div>
+                            <div class="text-xs font-bold uppercase tracking-[0.3em]">STANDARD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-navy text-white" id="testimonials">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-xs font-bold text-accent-gold uppercase tracking-[0.4em] mb-6">Success Stories</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold font-serif">受講生の実績</h3>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="border border-white/10 p-12 hover:border-accent-gold transition-colors duration-500">
+                        <div class="flex items-center gap-8 mb-10">
+                            <div class="size-24 bg-slate-800 overflow-hidden grayscale">
+                                <img alt="CEO Portrait" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4NU2f3LeM1hVYJIiO082HlLwcNgda0zBfxN0f9ttpwl7yvFa1u_ytu1_5_hD8g-swJ0rBuSenPGe_j5Svv-zUSDuDzb6LnpVWbV4-T8OSAPJhNhTLXPQPaiGU1AAAyhdzhTNMHBnjXACXxldSLYeYtghHd3FpZOFY1enh28EDX-A0Kkr2q0efzzaUeBWr19gSIuQybMkDo3We_STE8J8cQbrpJOszgYYNfvypE2Bgc0yklzTPdwEdjd1R8w0LfdomYT5NjQYaMo" />
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold mb-1">Case 01</h5>
+                                <p class="text-xs text-accent-gold tracking-widest uppercase font-bold">IT企業 代表取締役CEO
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-lg font-light leading-luxury italic">
+                            「海外投資家との交渉で、自分の考えを正確に伝え、結果として大型の資金調達に成功しました。単なる英語力ではなく、交渉の機微を理解したコーチのアドバイスが決め手でした。」
+                        </p>
+                    </div>
+                    <div class="border border-white/10 p-12 hover:border-accent-gold transition-colors duration-500">
+                        <div class="flex items-center gap-8 mb-10">
+                            <div class="size-24 bg-slate-800 overflow-hidden grayscale">
+                                <img alt="Executive Portrait" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYk2RK6VX4ieZzQuCe4w7lsckZzFUr--hKPenSh6AhIrBDq_aRBq5Eb8nq-KtCQHTJbIgvliGOijz8fAT7KxwPB61pcYZVhr2U0yqRy2Esu321RT0kFmdI8bq-5QNJZD0y3rx5mFhm6c-5dS6ZnuA9k7J_cS3uMDK4lMsomlm0K-mGzwKfStRpUF6JeSQ2UXDJEtX61KTt6vb2UUtWQu8Sjn7MewsDfBw6d-6UUfWhYYUSSMVa-Mjwpk2d_PrIc0KgL2Cq7DLqVM" />
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold mb-1">Case 02</h5>
+                                <p class="text-xs text-accent-gold tracking-widest uppercase font-bold">グローバルメーカー 常務執行役員
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-lg font-light leading-luxury italic">
+                            「独学で限界を感じていましたが、交渉のボトルネックを特定してもらい、わずか3ヶ月でリスニング力が向上。国際会議での議論をリードできるようになりました。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-white" id="contact">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col lg:flex-row gap-20">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl md:text-5xl font-bold text-navy mb-4 font-serif leading-tight">
+                            無料カウンセリング（30分）</h2>
+                        <div class="inline-flex items-center gap-3 mb-8">
+                            <span class="w-2 h-2 rounded-full bg-accent-gold animate-pulse"></span>
+                            <span class="text-xs font-bold text-navy tracking-[0.2em] uppercase">今月の新規枠：残り3枠</span>
+                        </div>
+                        <p class="text-slate-600 text-lg mb-12 leading-luxury font-light">
+                            会議・交渉で詰まる原因を特定し、最短の改善ルートをその場で整理します。英語学習の相談ではなく、<span
+                                class="text-navy font-bold border-b-2 border-accent-gold">「実戦で困らないための設計」</span>を持ち帰る30分です。
+                        </p>
+                        <div class="mb-16">
+                            <h4
+                                class="text-sm font-bold tracking-widest text-navy uppercase mb-8 flex items-center gap-4">
+                                <span class="w-8 h-[1px] bg-accent-gold"></span>
+                                得られること
+                            </h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 py-4 border-b border-slate-100">
+                                    <span class="material-symbols-outlined text-accent-gold text-xl">check</span>
+                                    <span class="text-navy font-medium">課題の言語化（どこで詰まっているか）</span>
+                                </li>
+                                <li class="flex items-center gap-4 py-4 border-b border-slate-100">
+                                    <span class="material-symbols-outlined text-accent-gold text-xl">check</span>
+                                    <span class="text-navy font-medium">最短ルートの提示（何を、どの順でやるか）</span>
+                                </li>
+                                <li class="flex items-center gap-4 py-4 border-b border-slate-100">
+                                    <span class="material-symbols-outlined text-accent-gold text-xl">check</span>
+                                    <span class="text-navy font-medium">プランの概算提示（3ヶ月30万円〜 ※会議／交渉／登壇 × 期限 ×
+                                        確保時間で変動）</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4
+                                class="text-sm font-bold tracking-widest text-navy uppercase mb-10 flex items-center gap-4">
+                                <span class="w-8 h-[1px] bg-accent-gold"></span>
+                                ご予約後の流れ
+                            </h4>
+                            <div class="space-y-0">
+                                <div class="step-item flex gap-8 pb-10 relative">
+                                    <div class="step-connector relative z-10">
+                                        <div
+                                            class="size-10 rounded-full border border-navy flex items-center justify-center font-bold text-navy bg-white">
+                                            1</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <h5 class="font-bold text-navy">ご予約</h5>
+                                        <p class="text-sm text-slate-500 font-light">カレンダーから選択</p>
+                                    </div>
+                                </div>
+                                <div class="step-item flex gap-8 pb-10 relative">
+                                    <div class="step-connector relative z-10">
+                                        <div
+                                            class="size-10 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-400 bg-white">
+                                            2</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <h5 class="font-bold text-navy">自動返信</h5>
+                                        <p class="text-sm text-slate-500 font-light">当日のURLと事前確認事項をお送りします</p>
+                                    </div>
+                                </div>
+                                <div class="step-item flex gap-8 pb-10 relative">
+                                    <div class="step-connector relative z-10">
+                                        <div
+                                            class="size-10 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-400 bg-white">
+                                            3</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <h5 class="font-bold text-navy">事前ヒアリング</h5>
+                                        <p class="text-sm text-slate-500 font-light">2分で完了</p>
+                                    </div>
+                                </div>
+                                <div class="step-item flex gap-8 pb-10 relative">
+                                    <div class="step-connector relative z-10">
+                                        <div
+                                            class="size-10 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-400 bg-white">
+                                            4</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <h5 class="font-bold text-navy">当日30分</h5>
+                                        <p class="text-sm text-slate-500 font-light">課題特定→改善ルート提示</p>
+                                    </div>
+                                </div>
+                                <div class="step-item flex gap-8 relative">
+                                    <div class="step-connector relative z-10">
+                                        <div
+                                            class="size-10 rounded-full border border-slate-200 flex items-center justify-center font-bold text-slate-400 bg-white">
+                                            5</div>
+                                    </div>
+                                    <div class="pt-1">
+                                        <h5 class="font-bold text-navy">提案書送付</h5>
+                                        <p class="text-sm text-slate-500 font-light">必要な方のみ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="sticky top-32 bg-slate-warm p-10 shadow-sm border border-slate-100">
+                            <div class="mb-10 flex items-center justify-between">
+                                <h4 class="text-xl font-bold text-navy font-serif">希望日程を選択</h4>
+                                <div class="flex gap-4">
+                                    <button class="p-2 border border-navy/10 hover:border-navy transition-all"><span
+                                            class="material-symbols-outlined text-sm">chevron_left</span></button>
+                                    <button class="p-2 border border-navy/10 hover:border-navy transition-all"><span
+                                            class="material-symbols-outlined text-sm">chevron_right</span></button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-4 mb-10 text-center">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Mo</div>
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Tu</div>
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">We</div>
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Th</div>
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Fr</div>
+                                <div class="text-[10px] font-bold text-navy/40 uppercase tracking-widest">Sa</div>
+                                <div class="text-[10px] font-bold text-navy/40 uppercase tracking-widest">Su</div>
+                                <div class="p-3 text-xs text-slate-300">28</div>
+                                <div class="p-3 text-xs text-slate-300">29</div>
+                                <div class="p-3 text-xs text-slate-300">30</div>
+                                <div class="p-3 text-sm font-bold hover:bg-navy hover:text-white cursor-pointer transition-all date-slot"
+                                    data-date="1日">1</div>
+                                <div class="p-3 text-sm font-bold hover:bg-navy hover:text-white cursor-pointer transition-all date-slot"
+                                    data-date="2日">2</div>
+                                <div class="p-3 text-sm font-bold bg-accent-gold text-navy shadow-lg date-slot active"
+                                    data-date="3日">3</div>
+                                <div class="p-3 text-sm font-bold hover:bg-navy hover:text-white cursor-pointer transition-all date-slot"
+                                    data-date="4日">4</div>
+                            </div>
+                            <div class="space-y-4 mb-12" id="time-slots">
+                                <button
+                                    class="w-full p-6 border border-navy/10 bg-white flex items-center justify-between group hover:border-navy transition-all time-slot-btn">
+                                    <span class="font-bold text-navy">14:00 - 14:30</span>
+                                    <span
+                                        class="text-[10px] font-bold tracking-widest text-accent-gold border border-accent-gold px-3 py-1">AVAILABLE</span>
+                                </button>
+                                <button
+                                    class="w-full p-6 border border-navy/10 bg-white flex items-center justify-between group hover:border-navy transition-all time-slot-btn">
+                                    <span class="font-bold text-navy">16:30 - 17:00</span>
+                                    <span
+                                        class="text-[10px] font-bold tracking-widest text-accent-gold border border-accent-gold px-3 py-1">OPEN
+                                        SLOT</span>
+                                </button>
+                            </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">Contact <span class="jp-sub">お問い合わせ</span></h2>
-                <p class="contact-lead">お仕事のご依頼・ご相談はお気軽にどうぞ。<br>通常24時間以内にご返信いたします。</p>
-                
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">お名前 <span class="required">必須</span></label>
-                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                            <!-- User Inputs -->
+                            <div class="space-y-4 mb-8">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-navy uppercase tracking-widest mb-2">お名前</label>
+                                    <input type="text" id="user-name" placeholder="山田 太郎"
+                                        class="w-full p-4 border border-navy/10 bg-slate-50 focus:border-navy focus:ring-0 transition-colors text-navy placeholder:text-slate-300">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-navy uppercase tracking-widest mb-2">メールアドレス</label>
+                                    <input type="email" id="user-email" placeholder="example@company.com"
+                                        class="w-full p-4 border border-navy/10 bg-slate-50 focus:border-navy focus:ring-0 transition-colors text-navy placeholder:text-slate-300">
+                                </div>
+                            </div>
+
+                            <button id="submit-booking"
+                                class="w-full bg-navy text-white py-6 text-sm font-bold tracking-[0.2em] hover:bg-deep-navy transition-all mb-10 shadow-2xl">
+                                無料カウンセリング（30分）を予約する
+                            </button>
+                            <div class="space-y-3 border-t border-navy/10 pt-8">
+                                <p class="text-xs text-slate-500 font-light leading-relaxed">
+                                    ※当日の売り込みはしません。必要な方にだけ、最適なプランをご提案します。
+                                </p>
+                                <p class="text-xs text-slate-500 font-light leading-relaxed">
+                                    ※守秘義務に配慮し、内容は外部に共有されません。
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス <span class="required">必須</span></label>
-                        <input type="email" id="email" name="email" required placeholder="例：your-email@example.com">
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-slate-warm" id="faq">
+            <div class="max-w-4xl mx-auto px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-xs font-bold text-accent-gold uppercase tracking-[0.4em] mb-6">Questions</h2>
+                    <h3 class="text-3xl font-bold text-navy font-serif">よくあるご質問</h3>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white border border-slate-100 p-8 shadow-sm">
+                        <button class="flex items-center justify-between w-full text-left group faq-btn">
+                            <span
+                                class="text-lg font-bold text-navy group-hover:text-accent-gold transition-colors">初心者でも受講可能ですか？</span>
+                            <span
+                                class="material-symbols-outlined text-navy/30 transition-transform duration-300">add</span>
+                        </button>
+                        <div class="mt-6 text-slate-500 font-light leading-luxury faq-content hidden">
+                            はい、可能です。当サービスは経営者の方に特化しており、中学英語レベルの方から、既にグローバル会議で発言されている方まで、個別のスタートラインに合わせて設計いたします。
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">件名</label>
-                        <select id="subject" name="subject">
-                            <option value="lp">LP制作について</option>
-                            <option value="wp">WordPress構築について</option>
-                            <option value="coding">コーディング代行について</option>
-                            <option value="other">その他</option>
-                        </select>
+                    <div class="bg-white border border-slate-100 p-8 shadow-sm">
+                        <button class="flex items-center justify-between w-full text-left group faq-btn">
+                            <span
+                                class="text-lg font-bold text-navy group-hover:text-accent-gold transition-colors">返金保証制度はありますか？</span>
+                            <span
+                                class="material-symbols-outlined text-navy/30 transition-transform duration-300">add</span>
+                        </button>
+                        <div class="mt-6 text-slate-500 font-light leading-luxury faq-content hidden">
+                            「成果にコミットする」という方針のもと、万が一メソッドにご満足いただけない場合は、開始30日以内であれば全額返金保証をご用意しております。安心してご参加ください。
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-                        <textarea id="message" name="message" rows="5" required placeholder="ご相談内容をご記入ください"></textarea>
+                    <div class="bg-white border border-slate-100 p-8 shadow-sm">
+                        <button class="flex items-center justify-between w-full text-left group faq-btn">
+                            <span
+                                class="text-lg font-bold text-navy group-hover:text-accent-gold transition-colors">仕事が不規則ですが、続けられますか？</span>
+                            <span
+                                class="material-symbols-outlined text-navy/30 transition-transform duration-300">add</span>
+                        </button>
+                        <div class="mt-6 text-slate-500 font-light leading-luxury faq-content hidden">
+                            はい。当コーチングは「決まった時間にスクールに通う」必要はありません。24時間いつでもチャットで質問可能、早朝・深夜の学習もサポートします。忙しい経営者のライフスタイルに完全に寄り添います。
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-submit">送信する</button>
-                </form>
+                    <div class="bg-white border border-slate-100 p-8 shadow-sm">
+                        <button class="flex items-center justify-between w-full text-left group faq-btn">
+                            <span
+                                class="text-lg font-bold text-navy group-hover:text-accent-gold transition-colors">なぜ個別見積もりなのですか？</span>
+                            <span
+                                class="material-symbols-outlined text-navy/30 transition-transform duration-300">add</span>
+                        </button>
+                        <div class="mt-6 text-slate-500 font-light leading-luxury faq-content hidden">
+                            当サービスは画一的なカリキュラムではなく、あなたの「直近のゴール（例：来月の投資家プレゼン成功）」にフルコミットするためです。必要な期間とリソースを最適化し、無駄なコストを省いたプランをご提示します。
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-logo">Amn<span>.Design</span></div>
-            <p class="copyright">&copy; 2026 Amn.Design All Rights Reserved.</p>
+    <footer class="bg-navy text-white py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-10">
+                        <span class="material-symbols-outlined text-accent-gold text-3xl">account_balance</span>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-black tracking-[0.2em] uppercase leading-none">EXECUTIVE</span>
+                            <span class="text-[10px] tracking-[0.4em] text-accent-gold font-bold uppercase">English
+                                Coaching</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-10 font-light leading-luxury">
+                        世界で戦う日本人のための、最高峰の英語コーチングサービス。次世代のグローバルリーダーを育成します。
+                    </p>
+                    <div class="flex gap-6">
+                        <a class="text-white/40 hover:text-accent-gold transition-colors" href="#">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-white/40 hover:text-accent-gold transition-colors" href="#">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-sm font-bold tracking-widest text-accent-gold uppercase mb-8">Service</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm font-light">
+                        <li><a class="hover:text-white transition-colors" href="#">Methodology</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Course &amp; Pricing</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Executive Coaches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-bold tracking-widest text-accent-gold uppercase mb-8">Support</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm font-light">
+                        <li><a class="hover:text-white transition-colors" href="#">Consultation</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Help Center</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Company Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/20 text-xs font-bold tracking-widest">
+                <p>© 2024 EXECUTIVE ENGLISH COACHING. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-12 uppercase">
+                    <a class="hover:text-white transition-colors" href="#">Legal Notice</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
